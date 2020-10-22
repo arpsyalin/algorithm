@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.4.1)
+AUX_SOURCE_DIRECTORY(. SRC_LIST)
+list(APPEND SRC_LIST)
+#INCLUDE_DIRECTORIES()
+add_library(native-lib SHARED ${SRC_LIST})
+target_link_libraries(native-lib ${log-lib})
